@@ -26,7 +26,7 @@ class BookRepositoryTest {
 
         Book book1 = bookRepository.findByTitleAndAuthor("모순","양귀자");
 
-        System.out.println("Member Id = " + book1.getId());
+        System.out.println("Member Id = " + book1.getBookId());
     }
 
 }
