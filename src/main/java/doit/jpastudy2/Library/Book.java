@@ -20,13 +20,14 @@ public class Book {
     private String author;
     private String publisher;
     private String isbn;
+    private char available;
 
     @Builder
-    public Book(String title, String author, String publisher, String isbn) {
+    public Book(String title, String author, String publisher, String isbn, char available) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
         this.isbn = isbn;
-
+        this.available = available;
     }
 }

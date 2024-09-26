@@ -24,12 +24,14 @@ public class Member {
     private String email;
     private String phone;
     private LocalDate joinDate;
+    private Long borrow;
 
     @Builder
-    public Member(String name, String email, String phone, LocalDate joinDate) {
+    public Member(String name, String email, String phone, LocalDate joinDate, Long borrow) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.joinDate = joinDate;
+        this.borrow = borrow;
     }
 }
