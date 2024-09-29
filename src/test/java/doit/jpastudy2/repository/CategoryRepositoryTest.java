@@ -66,19 +66,19 @@ class ArmyRepositoryTest {
     void findByName() {
         // Given
         Army army1 = Army.builder()
-                .Name("박준혁")
+                .name("박준혁")
                 .build();
 
         Army army2 = Army.builder()
-                .Name("노승현")
+                .name("노승현")
                 .build();
 
         Army army3 = Army.builder()
-                .Name("설만수")
+                .name("설만수")
                 .build();
 
         Army army4 = Army.builder()
-                .Name("현서호")
+                .name("현서호")
                 .build();
 
 

@@ -30,7 +30,7 @@ public class Army {
     private String description;
 
     @Builder // 빌더 패턴을 사용할 수 있게 한다.
-    public Army(String Name, String phoneNumber, String description) {
+    public Army(String name, String militaryUnit, String description) {
         this.name = name;
         this.militaryUnit = militaryUnit;
         this.description = description;
