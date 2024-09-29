@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional // 테스트 케이스에 이 어노테이션이 있으면, 테스트가 끝나면 롤백을 해준다. ( 데이터베이스 초기화 )
 @SpringBootTest // 스프링 컨테이너를 이용한 테스트
-class CategoryRepositoryTest {
+class ArmyRepositoryTest {
 
     @Autowired // 스프링이 관리하는 빈을 주입받는다.
     private ArmyRepository categoryRepository;
@@ -54,7 +54,7 @@ class CategoryRepositoryTest {
 
         // When
         Army result1 = categoryRepository.findByDescription("행정병");
-        Army result2 = categoryRepository.findByDescription("운전병");
+        Army result2 = categoryRepository.findByDescription("통신병");
 
         // Then
         Assertions.assertThat(result1).isNull();
