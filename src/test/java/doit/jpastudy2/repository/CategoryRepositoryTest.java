@@ -34,7 +34,7 @@ class ArmyRepositoryTest {
         // Then
         List<Army> categories = categoryRepository.findAll();
         Assertions.assertThat(categories).hasSize(2);
-        Assertions.assertThat(categories.get(0).getDescription()).isEqualTo("통신병");
+        Assertions.assertThat(categories.get(1).getDescription()).isEqualTo("통신병");
     }
 
     @DisplayName("Description을 이용한 조회")
@@ -53,8 +53,8 @@ class ArmyRepositoryTest {
         categoryRepository.save(army2);
 
         // When
-        Army result1 = categoryRepository.findByDescription("행정병");
-        Army result2 = categoryRepository.findByDescription("통신병");
+        Army result1 = categoryRepository.findByDescription("통신병");
+        Army result2 = categoryRepository.findByDescription("운전병");
 
         // Then
         Assertions.assertThat(result1).isNull();
@@ -90,7 +90,8 @@ class ArmyRepositoryTest {
         Army result3 = categoryRepository.findByName("노승현");
 
         // Then
-        Assertions.assertThat(result2).isNull();
-        Assertions.assertThat(result3.getDescription()).isEqualTo("노승현");
+        Assertions.assertThat(result1).isNull();
+        Assertions.assertThat(result2).isNotNull();
+        Assertions.assertThat(result3.getName()).isEqualTo("노승현");
     }
 }
