@@ -1,10 +1,6 @@
 package doit.jpastudy2.repository;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @Getter
-public class Category {
+public class Category1 {
 
     @Id // PK임을 나타낸다.
     //@GeneratedValue(strategy = GenerationType.AUTO) // 자동 생성되는 값임을 나타낸다.
@@ -20,19 +16,20 @@ public class Category {
     private String exercise;
 
     // @Column(name = "type")이 생략된 경우 필드명이 컬럼명이 된다. snake_case로 변환된다.
-    private String time;
+    private String gold;
 
     // @Column(name = "description")이 생략된 경우 필드명이 컬럼명이 된다.
-    private String cORw;
+    private String silver;
 
 
-    private String place;
+    private String bronze;
 
-    @Builder // 빌더 패턴을 사용할 수 있게 한다.
-    public Category(String exercise, String time, String cORw, String place) {
+    @Builder
+
+    public Category1(String exercise, String gold, String silver, String bronze) {
         this.exercise = exercise;
-        this.time = time;
-        this.cORw = cORw;
-        this.place = place;
+        this.gold = gold;
+        this.silver = silver;
+        this.bronze = bronze;
     }
 }
