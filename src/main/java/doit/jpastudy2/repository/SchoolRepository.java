@@ -2,7 +2,7 @@ package doit.jpastudy2.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CategoryRepository extends JpaRepository<Category, Long> {
+public interface SchoolRepository extends JpaRepository<School, Long> {
 
     // 쿼리 메소드 패턴은 다음과 같다.
     // [ ] = Optional
@@ -10,8 +10,8 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     // find + [ ] + By + (조건)
 
     // select * from Category
-    Category findByDescription(String description);
-
+    School findBySchoolName(String schoolName);
     // select * from Category where type = ? and description = ?
-    Category findByTypeAndDescription(String type, String description);
+    School findBySchoolNameAndTotalStudents(String schoolName, int totalStudents);
+
 }
