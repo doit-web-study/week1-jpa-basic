@@ -72,7 +72,7 @@ class SchoolRepositoryTest {
                 .build();
         schoolRepository.saveAll(List.of(school1, school2));
 
-        // When
+        // When~
         School result1 = schoolRepository.findBySchoolNameAndTotalStudents("아주대학교", 13884);
         School result2 = schoolRepository.findBySchoolNameAndTotalStudents("서울대학교", 35000);
 
