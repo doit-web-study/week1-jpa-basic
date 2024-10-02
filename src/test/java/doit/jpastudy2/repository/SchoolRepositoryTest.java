@@ -76,7 +76,7 @@ class SchoolRepositoryTest {
         School result1 = schoolRepository.findBySchoolNameAndTotalStudents("아주대학교", 13884);
         School result2 = schoolRepository.findBySchoolNameAndTotalStudents("서울대학교", 35000);
 
-        // Then
+        // Then.
         Assertions.assertThat(result1).isNotNull();
         Assertions.assertThat(result2.getSchoolName()).isEqualTo("서울대학교");
         Assertions.assertThat(result2.getTotalStudents()).isEqualTo(35000);
